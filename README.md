@@ -8,4 +8,5 @@ Use the following static fields to perform your checks:
   * moved -> Self explainatory.
   * dir -> 0 = Left, 1 = Up, 2 = Right, 3 = Down
   * tapped -> Self explainatory.
+  
 Using the previous boolean you used in your check, set back to false after performing action when gesture is made to ensure gesture will not loop. 
