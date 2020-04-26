@@ -49,10 +49,6 @@ public class Gestures extends Activity {
         th.start();
     }
 
-    private boolean cleanUp(boolean value) {
-
-    }
-
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         int x = (int) event.getX();
