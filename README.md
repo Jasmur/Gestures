@@ -1,5 +1,5 @@
 # Gestures
-Basic template for using gestures through Java. JNI source will be kept in private. Ideal menu is to check if lastTickCount is 4, (player tapped 4 times in a second), to open/close menu, use held to select highlighted sub menu/mod/etc, moved check for direction gesture, and finally use dir to determine where our next highlight will be.
+Basic template for using gestures through Java. JNI source will be kept in private. Ideal menu is to check if lastTouchCount is 4, (player tapped 4 times in a second), to open/close menu, use held to select highlighted sub menu/mod/etc, moved check for direction gesture, and finally use dir to determine where our next highlight will be.
 
 Start a new intent for the activity provided.
 Use the following static fields to perform your checks:
