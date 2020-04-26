@@ -13,11 +13,11 @@ public class Gestures extends Activity {
     private int startTick;
     private int endTick;
     private int touchCount;
-    private boolean moved;
     public static int lastTouchCount;
     public static int dir; /*0 = Left, 1 = Up, 2 = Right, 3 = Down*/
     public static boolean held;
     public static boolean tapped;
+    public static boolean moved;
 
     @Override
     protected void onCreate(android.os.Bundle savedInstanceState) {
@@ -66,7 +66,6 @@ public class Gestures extends Activity {
                 endX = x;
                 endY = y;
 
-                calculateDir();
                 gesturingOut();
 
                 endTick = startTick;
@@ -79,7 +78,10 @@ public class Gestures extends Activity {
         int height = getWindowManager().getDefaultDisplay().getHeight();
 
         moved = (xDif > width / 10 || yDif > height / 10);
-        held = startTick >= endTick + 2;
+
+        if (!moved) held = startTick >= endTick + 2;
+        else calculateDir();
+
         tapped = (!moved && !held);
         touchCount ++;
     }
