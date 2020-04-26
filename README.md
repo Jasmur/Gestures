@@ -7,3 +7,4 @@ Use the following static fields to perform your checks:
   * held -> Self explainatory.
   * moved -> Self explainatory.
   * dir -> 0 = Left, 1 = Up, 2 = Right, 3 = Down
+  * tapped -> Self explainatory.
