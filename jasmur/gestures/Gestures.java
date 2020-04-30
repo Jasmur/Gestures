@@ -77,6 +77,9 @@ public class Gestures extends Activity {
         int width = getWindowManager().getDefaultDisplay().getWidth();
         int height = getWindowManager().getDefaultDisplay().getHeight();
 
+        xDif = Math.abs(startX - endX);
+        yDif = Math.abs(startY - endY);
+
         moved = (xDif > width / 10 || yDif > height / 10);
 
         if (!moved) held = startTick >= endTick + 2;
@@ -87,9 +90,6 @@ public class Gestures extends Activity {
     }
 
     private void calculateDir() {
-        xDif = Math.abs(startX - endX);
-        yDif = Math.abs(startY - endY);
-
         if (startX > endX) dir = 0;
         else dir = 2;
         if (startY > endY) dir = 1;
